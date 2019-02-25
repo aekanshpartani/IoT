@@ -38,5 +38,4 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:15.0.0'
     implementation 'com.mikhaellopez:circularimageview:3.0.2'
     implementation 'com.github.mrgames13:SplashScreen:1.0.2'
-
 }

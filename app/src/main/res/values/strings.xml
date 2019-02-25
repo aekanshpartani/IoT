@@ -47,5 +47,7 @@
     <string name="submit">SUBMIT</string>
     <string name="back">BACK</string>
 
+
+    <string name="home_location_text">It seems you are in Koramangla</string>
 </resources>
 
