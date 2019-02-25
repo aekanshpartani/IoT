@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "792549703097",
+    "firebase_url": "https://test-12258.firebaseio.com",
+    "project_id": "test-12258",
+    "storage_bucket": "test-12258.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792549703097:android:b20c924eea9a76b8",
+        "android_client_info": {
+          "package_name": "com.example.firestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792549703097-90crupua3o84md9i1i6svkdsg5h7dken.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firestore",
+            "certificate_hash": "a454e49a87ff81e13985fdfd4d685ade6126b92a"
+          }
+        },
+        {
+          "client_id": "792549703097-75svbvkcr2ua7qpu4qplfl5gvj7fcggh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYHs0rr07T0R1CAYaynk-0pL9NY_cdcj0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792549703097-75svbvkcr2ua7qpu4qplfl5gvj7fcggh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792549703097:android:11e337e492c0e522",
+        "android_client_info": {
+          "package_name": "com.example.sinha.iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792549703097-etca1usngl69mgo151g43iknnqiafh8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sinha.iot",
+            "certificate_hash": "76b29d66572cac444d1dd5bc428079372fc49503"
+          }
+        },
+        {
+          "client_id": "792549703097-tnngbaji9jjbfblkbh1rr9s0p3fi0v9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sinha.iot",
+            "certificate_hash": "050299b8fe1f560f58164acbf7c37605166fdb4d"
+          }
+        },
+        {
+          "client_id": "792549703097-jnki5eeqkj50vk86tlf18r7unqeu3gtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sinha.iot",
+            "certificate_hash": "a454e49a87ff81e13985fdfd4d685ade6126b92a"
+          }
+        },
+        {
+          "client_id": "792549703097-75svbvkcr2ua7qpu4qplfl5gvj7fcggh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYHs0rr07T0R1CAYaynk-0pL9NY_cdcj0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792549703097-75svbvkcr2ua7qpu4qplfl5gvj7fcggh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

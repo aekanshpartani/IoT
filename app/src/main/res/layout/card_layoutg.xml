@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="1"
+    android:rowCount="3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/card1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="4dp"
+        android:background="@drawable/layout_bg"
+        android:padding="16dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/sale" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:text="@string/placeName1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_title"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:text="@string/subText1"
+            android:textSize="15sp" />
+
+        <android.widget.RatingBar
+            android:id="@+id/myRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_detail"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:padding="2dp"
+            android:rating="3.5"
+            android:theme="@style/RatingBar" />
+
+        <TextView
+            android:id="@+id/slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/no1"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/direction"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/book"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/googlemaps"
+            android:padding="1dp"
+            android:scaleType="fitXY"/>
+
+        <Button
+            android:id="@+id/book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_image"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:text="@string/btn1"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</GridLayout>
