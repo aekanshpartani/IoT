@@ -1,6 +1,7 @@
 package com.example.sinha.iot;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -17,15 +18,22 @@ public class PayActivity extends Activity {
 FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
 DocumentReference dr ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+       NotificationManager m = (NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);;
+        //m.notify(999,notification);
+        m.cancel(999);
+        //mn.cancel(999);
+      //  Toast.makeText(this, "nhibhai", Toast.LENGTH_SHORT).show();
 
         dr = firebaseFirestore.collection("Locations").document(
                 "jwSeHF5lka1ne2pklGWY").collection("Sub_Locations").
                 document("atrtLTLvTInzsnE9TB6r");
 
-        dr.update("Gate Bit",true);
+        dr.update("GateBit",true);
        // Toast.makeText(this, "Pay Now", Toast.LENGTH_SHORT).show();
         //firebaseAuth.getCurrentUser().getEmail();
 //        cr = firebaseFirestore.collection("Users");

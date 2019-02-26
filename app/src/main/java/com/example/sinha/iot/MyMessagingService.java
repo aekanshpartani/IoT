@@ -19,7 +19,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import java.util.Map;
 
 public class MyMessagingService extends FirebaseMessagingService {
-
+    public NotificationManager m;
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         //super.onMessageReceived(remoteMessage);
@@ -78,9 +78,10 @@ public class MyMessagingService extends FirebaseMessagingService {
                     .setContentTitle(title)
                     .setContentText(message)
                     .setDefaults(Notification.DEFAULT_ALL)
-                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                     .setVibrate(new long[0])// heads-up
                     .addAction(R.drawable.user,"Pay",payInent)
+                    .setAutoCancel(true)
                     .build();
         }
         else if( message.charAt(0) == 'G' )
@@ -93,28 +94,32 @@ public class MyMessagingService extends FirebaseMessagingService {
                     .setContentTitle(title)
                     .setContentText(message)
                     .setDefaults(Notification.DEFAULT_ALL)
-                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                     .setVibrate(new long[0])// heads-up
                     .addAction(R.drawable.user,"Verify",payInent)
+                    .setAutoCancel(true)
                     .build();
         }
         else if( message.charAt(0) == 'I' )
         {
             //start activity invalid slot
 //            Intent intent = new Intent(this, PayActivity.class);
+
 //            PendingIntent payInent = PendingIntent.getActivity(MyMessagingService.this, 0, intent, 0);
             notification = new NotificationCompat.Builder(this, "Notify")
                     .setSmallIcon(android.R.drawable.ic_dialog_info)
                     .setContentTitle(title)
                     .setContentText(message)
                     .setDefaults(Notification.DEFAULT_ALL)
-                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    .setAutoCancel(true)
                     .setVibrate(new long[0])// heads-up
               //      .addAction(R.drawable.user,"Verify",payInent)
                     .build();
         }
 
-        NotificationManager m = (NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);;
+        m = (NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);;
         m.notify(999,notification);
+       // m.cancel(999);
     }
 }
