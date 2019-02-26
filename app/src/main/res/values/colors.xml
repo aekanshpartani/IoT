@@ -36,6 +36,8 @@
     <color name="followingBg">#49BEFF</color>
     <color name="grey">#E5E5E5</color>
 
-    <color name="background_color_end">#F8CDDA</color>
-    <color name="background_color_start">#1D2B64</color>
+    <!--<color name="background_color_end">#F8CDDA</color>-->
+    <!--<color name="background_color_start">#1D2B64</color>-->
+    <color name="background_color_start">#F7F8F8</color>
+    <color name="background_color_end">#ACBB78</color>
 </resources>
