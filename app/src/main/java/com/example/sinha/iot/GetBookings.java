@@ -171,7 +171,7 @@ class GetBookings extends AsyncTask<String, String, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
 
-        Toast.makeText(context, "Hey", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Bookings Loaded", Toast.LENGTH_SHORT).show();
         //progress.dismiss();
 // if (pd.isShowing()){
 // pd.dismiss();
