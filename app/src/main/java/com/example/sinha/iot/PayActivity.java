@@ -34,7 +34,8 @@ DocumentReference dr ;
                 document("atrtLTLvTInzsnE9TB6r");
 
         dr.update("GateBit",true);
-       // Toast.makeText(this, "Pay Now", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this, "You are Verified\nPlease Enter", Toast.LENGTH_LONG).show();
         //firebaseAuth.getCurrentUser().getEmail();
 //        cr = firebaseFirestore.collection("Users");
 //        Toast.makeText(this, ""+firebaseAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
@@ -56,6 +57,6 @@ DocumentReference dr ;
 //            }
 //        });
         //Toast.makeText(this, "nhi hua", Toast.LENGTH_SHORT).show();
-
+        finish();
     }
 }
