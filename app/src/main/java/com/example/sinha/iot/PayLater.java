@@ -3,6 +3,8 @@ package com.example.sinha.iot;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,30 +27,43 @@ public class PayLater extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     CollectionReference cr ;
     DocumentReference dr;
+    Button b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_pay_later);
+        setContentView(R.layout.activity_pay_later);
 
-        cr = firebaseFirestore.collection("Users");
+        dr = firebaseFirestore.collection("Locations").document(
+                "jwSeHF5lka1ne2pklGWY ").collection("Sub_Locations").
+                document("atrtLTLvTInzsnE9TB6r");
 
-        final String[] userId = new String[1];
-        Toast.makeText(this, ""+firebaseAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
-        cr.whereEqualTo("Enail",firebaseAuth.getCurrentUser().getEmail()).get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        b = findViewById(R.id.submit);
+
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                for(QueryDocumentSnapshot ds :queryDocumentSnapshots)
-                {
-                   dr = ds.getReference();
-                }
-                Map<String, Object> dues = new HashMap<>();
-                dues.put("Dues",true );
-                dr.update(dues);
-
-
+            public void onClick(View v) {
+                dr.update("Gate Bit",true);
             }
         });
+
+
+//        final String[] userId = new String[1];
+//        Toast.makeText(this, ""+firebaseAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
+//        cr.whereEqualTo("Enail",firebaseAuth.getCurrentUser().getEmail()).get()
+//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//            @Override
+//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                for(QueryDocumentSnapshot ds :queryDocumentSnapshots)
+//                {
+//                   dr = ds.getReference();
+//                }
+//                Map<String, Object> dues = new HashMap<>();
+//                dues.put("Dues",true );
+//                dr.update(dues);
+//
+//
+//            }
+//        });
 
 
 

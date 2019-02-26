@@ -166,15 +166,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 //                        Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
 
-                String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?saddr=%f,%f(%s)&daddr=%f,%f (%s)", sourceLatitude, sourceLongitude, "Home Sweet Home", destinationLatitude, destinationLongitude, "Where the party is at");
+//                String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?saddr=%f,%f(%s)&daddr=%f,%f (%s)", sourceLatitude, sourceLongitude, "Home Sweet Home", destinationLatitude, destinationLongitude, "Where the party is at");
+//
+//                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+//                // Make the Intent explicit by setting the Google Maps package
+//                mapIntent.setPackage("com.google.android.apps.maps");
+//
+//                if (mapIntent.resolveActivity(v.getContext().getPackageManager()) != null) {
+//                    v.getContext().startActivity(mapIntent);
+//                }
 
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                // Make the Intent explicit by setting the Google Maps package
+                Uri gmmIntentUri = Uri.parse("google.navigation:q="+destinationLatitude+","+destinationLongitude);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
-
-                if (mapIntent.resolveActivity(v.getContext().getPackageManager()) != null) {
-                    v.getContext().startActivity(mapIntent);
-                }
+                v.getContext().startActivity(mapIntent);
 
             }
         });
