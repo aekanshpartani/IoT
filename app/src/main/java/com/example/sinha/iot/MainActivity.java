@@ -42,13 +42,16 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     CollectionReference cr ;
     DocumentReference dr;
+    FragmentTransaction fm;
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            FragmentTransaction fm = getSupportFragmentManager().beginTransaction();
+            fm = getSupportFragmentManager().beginTransaction();
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     BookFragmenr bff = (BookFragmenr)getSupportFragmentManager().findFragmentByTag("BookFra") ;
@@ -170,6 +173,18 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
 
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        fm = getSupportFragmentManager().beginTransaction();
+        BookFragmenr bff1 = (BookFragmenr)getSupportFragmentManager().findFragmentByTag("BookFra");
+        if(bff1 == null) {
+            BookFragmenr bf = new BookFragmenr();
+            fm.replace(R.id.fragment, bf,"BookFra");
+            fm.commit();
         }
     }
 }
