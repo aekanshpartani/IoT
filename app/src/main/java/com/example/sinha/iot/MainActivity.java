@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             BookFragmenr bf = new BookFragmenr();
             fm.replace(R.id.fragment, bf,"BookFra");
             fm.commit();
+            //Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
         }
     }
 }
