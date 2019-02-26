@@ -1,6 +1,7 @@
 package com.example.sinha.iot;
 
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,9 +35,11 @@ public class PayLaterTest extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PayLaterTest.this, "Yes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PayLaterTest.this, "Verified & Paid", Toast.LENGTH_LONG).show();
                 dr.update("GateBit",true);
-                
+                Intent switchToMain = new Intent(PayLaterTest.this, MainActivity.class);
+                switchToMain.putExtra("FLAG", "YES");
+                startActivity(switchToMain);
             }
         });
     }

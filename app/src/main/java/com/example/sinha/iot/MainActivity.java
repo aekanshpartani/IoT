@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                             msg = "failed";
                         }
                         Log.d("tag", msg);
-                        Toast.makeText(getApplicationContext(), "Subscibed", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Subscribed", Toast.LENGTH_SHORT).show();
                     }
                 });
 
