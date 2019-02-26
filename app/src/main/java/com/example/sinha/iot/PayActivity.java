@@ -8,17 +8,24 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class PayActivity extends Activity {
-//FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-//FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
-//CollectionReference cr ;
+FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+DocumentReference dr ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        dr = firebaseFirestore.collection("Locations").document(
+                "jwSeHF5lka1ne2pklGWY ").collection("Sub_Locations").
+                document("atrtLTLvTInzsnE9TB6r");
+
+        dr.update("Gate Bit",true);
        // Toast.makeText(this, "Pay Now", Toast.LENGTH_SHORT).show();
         //firebaseAuth.getCurrentUser().getEmail();
 //        cr = firebaseFirestore.collection("Users");

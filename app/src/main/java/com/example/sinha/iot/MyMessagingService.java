@@ -85,10 +85,32 @@ public class MyMessagingService extends FirebaseMessagingService {
         else if( message.charAt(0) == 'G' )
         {
             //start activity go in
+            Intent intent = new Intent(this, PayActivity.class);
+            PendingIntent payInent = PendingIntent.getActivity(MyMessagingService.this, 0, intent, 0);
+            notification = new NotificationCompat.Builder(this, "Notify")
+                    .setSmallIcon(android.R.drawable.ic_dialog_info)
+                    .setContentTitle(title)
+                    .setContentText(message)
+                    .setDefaults(Notification.DEFAULT_ALL)
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setVibrate(new long[0])// heads-up
+                    .addAction(R.drawable.user,"Verify",payInent)
+                    .build();
         }
         else if( message.charAt(0) == 'I' )
         {
             //start activity invalid slot
+//            Intent intent = new Intent(this, PayActivity.class);
+//            PendingIntent payInent = PendingIntent.getActivity(MyMessagingService.this, 0, intent, 0);
+            notification = new NotificationCompat.Builder(this, "Notify")
+                    .setSmallIcon(android.R.drawable.ic_dialog_info)
+                    .setContentTitle(title)
+                    .setContentText(message)
+                    .setDefaults(Notification.DEFAULT_ALL)
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setVibrate(new long[0])// heads-up
+              //      .addAction(R.drawable.user,"Verify",payInent)
+                    .build();
         }
 
         NotificationManager m = (NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);;
