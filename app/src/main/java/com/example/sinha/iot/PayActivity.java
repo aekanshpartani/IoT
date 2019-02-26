@@ -22,7 +22,7 @@ DocumentReference dr ;
         super.onCreate(savedInstanceState);
 
         dr = firebaseFirestore.collection("Locations").document(
-                "jwSeHF5lka1ne2pklGWY ").collection("Sub_Locations").
+                "jwSeHF5lka1ne2pklGWY").collection("Sub_Locations").
                 document("atrtLTLvTInzsnE9TB6r");
 
         dr.update("Gate Bit",true);

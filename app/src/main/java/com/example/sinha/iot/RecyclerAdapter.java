@@ -286,8 +286,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             JSONObject duration = d.getJSONObject("duration");
             time = duration.getString("text");
 
-
-        if( time.indexOf("day") > 0 || time.indexOf("hours") > 0  || Integer.parseInt(time.substring(0,time.indexOf(' '))) > 10)
+            Toast.makeText(context, time, Toast.LENGTH_SHORT).show();
+        if( time.indexOf("day") > 0 || time.indexOf("hours") > 0  || Integer.parseInt(time.substring(0,time.indexOf(' '))) > 15)
             {
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);
                 LinearLayout ls = new LinearLayout(alert.getContext());

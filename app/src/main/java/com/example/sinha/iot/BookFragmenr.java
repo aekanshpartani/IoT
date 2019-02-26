@@ -210,6 +210,8 @@ public class BookFragmenr extends Fragment {
                                 }
                             });
 
+
+
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
                 } else {

@@ -70,7 +70,8 @@ public class MyMessagingService extends FirebaseMessagingService {
         Notification notification = null;
         if( message.charAt(0) == 'C' )
         {
-            Intent intent = new Intent(this, PayLater.class);
+//            Intent intent = new Intent(this, PayLater.class);
+            Intent intent = new Intent(this, PayLaterTest.class);
             PendingIntent payInent = PendingIntent.getActivity(MyMessagingService.this, 0, intent, 0);
             notification = new NotificationCompat.Builder(this, "Notify")
                     .setSmallIcon(android.R.drawable.ic_dialog_info)
